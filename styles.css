@@ -1,0 +1,134 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFBE79;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Style for the title card section */
+#titlecard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* 15% of the viewport height */
+    background-color: #EA3C12; /* Background color as specified */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Style for the main TriviaDak logo */
+#logo {
+    max-height: 100%;
+    max-width: 20%; /* Controls size of the TriviaDak logo */
+    height: auto;
+    margin: 0 20px; /* Spacing between the football logos */
+}
+
+/* Style for the football logos */
+.football-logo {
+    max-height: 100%;
+    max-width: 10%; /* Adjust size of football logos */
+    height: auto;
+}
+
+/* Styles for the game modes section */
+#game-modes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    /*flex-grow: 1;*/
+    overflow: hidden;
+}
+
+/* Styles for each game mode box */
+.game-mode {
+    background-color: #fff;
+    border: 2px solid #EA3C12;
+    border-radius: 10px;
+    width: 22%; /* Adjusted width to fit four boxes per row */
+    height: 50%;
+    margin: 1%;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.game-mode:hover {
+    transform: scale(1.05);
+}
+
+.game-mode img {
+    width: auto;
+    height: 44%;
+}
+
+.game-mode h2 {
+    font-size: 1.5vw;
+    margin: 10px 0;
+    color: #EA3C12;
+}
+
+.game-mode p {
+    font-size: 1vw;
+    padding: 0 10px 20px 10px;
+}
+
+/* Remove default link styles */
+.game-mode a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Optional: Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust game mode box width */
+    .game-mode {
+        width: 45%; /* Two boxes per row */
+        margin: 2%;
+    }
+
+    /* Adjust font sizes */
+    .game-mode h2 {
+        font-size: 3vw;
+    }
+
+    .game-mode p {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Stack game mode boxes vertically */
+    .game-mode {
+        width: 90%; /* Full width */
+        margin: 5% auto;
+    }
+
+    /* Adjust font sizes */
+    .game-mode h2 {
+        font-size: 4vw;
+    }
+
+    .game-mode p {
+        font-size: 3.5vw;
+    }
+}
+
+#footer {
+    height: 8vh;
+    background-color: #EA3C12; /* Same as title card for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
